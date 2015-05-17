@@ -21,6 +21,8 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
 
 def get_tweets(screen_name):
+    """Fetch 200 (max per single request) tweets from the Twitter API."""
+
     tweets = api.user_timeline(screen_name=screen_name,
                                include_rts=False,
                                count=200)
@@ -28,6 +30,9 @@ def get_tweets(screen_name):
     return tweets
 
 def tokenize_tweets(tweets):
+    """Takes a list of tweets and returns a single lost of tokens with
+    stopwords removed."""
+
     tokens = []
     for tweet in tweets:
         text = tweet.text.lower()
@@ -39,7 +44,9 @@ def tokenize_tweets(tweets):
     return tokens
 
 def top_tokens(tokens, n=20):
+    """Takes a list of tokens and returns the most frequently occurring
+    amongst them."""
+
     freq_dist = nltk.FreqDist(tokens)
 
     return freq_dist.most_common(n)
-    
