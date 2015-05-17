@@ -10,6 +10,18 @@ React to play nicely.
 Run `script/install.sh`.  This downloads the files `nltk` requires to
 tokenize its input.
 
+Add a static JSON file at `app/config/twitter.json' with Twitter app
+credentials in the following format:
+
+```
+{
+    "consumer_key": "<CONSUMER KEY>",
+    "consumer_secret": "<CONSUMER SECRET>",
+    "access_token": "<ACCESS TOKEN>",
+    "access_token_secret": "<ACCESS TOKEN SECRET>"
+}
+```
+
 ## Running
 
 ```
