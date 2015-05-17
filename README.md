@@ -28,3 +28,8 @@ credentials in the following format:
 cd app
 python main.py
 ```
+
+## To use
+
+Browse to `http://178.62.35.237/`.  Submit any valid Twitter screen
+name, for example `taylorswift13`, `andrewwk` or `_tobrien`.
