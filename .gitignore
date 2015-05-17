@@ -6,3 +6,4 @@ lib
 pip-selfcheck.json
 /share/
 *.pyc
+app/config/twitter.json
